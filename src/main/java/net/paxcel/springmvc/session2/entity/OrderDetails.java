@@ -15,6 +15,8 @@ public class OrderDetails {
 	private Long quantity;
 	private Float price;
 	
+	private String detail;
+	
 	@Id
 	@Column(name = "ID", unique = true, nullable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
