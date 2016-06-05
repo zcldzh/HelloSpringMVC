@@ -1,0 +1,54 @@
+USE test1;
+
+GO
+
+CREATE TABLE [dbo].[USER_NAME](
+	[ID] [int] IDENTITY(100000,1) NOT NULL,
+	[FIRST_NAME] nvarchar (100) NOT NULL,
+	[LAST_NAME] nvarchar (100) NOT NULL,	
+ CONSTRAINT [PK_USER_NAME] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+INSERT INTO [dbo].[USER_NAME]
+           ([FIRST_NAME]
+           ,[LAST_NAME])
+     VALUES
+           ('Vivek' ,'Kumar')
+		   ,('Aashu' ,'Jain')
+		   ,('Krishan' ,'Babbar')
+		   ,('Sachin' ,'Verma')
+
+GO
+
+USE test2;
+
+GO
+
+CREATE TABLE [dbo].[ORDER_DETAILS](
+	[ID] [int] IDENTITY(100000,1) NOT NULL,
+	[PRODUCT_NAME] nvarchar (100) NOT NULL,
+	[QUANTITY] [int] NOT NULL,
+	[PRICE] [float] NOT NULL,	
+ CONSTRAINT [PK_ORDER_DETAILS] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+INSERT INTO [dbo].[ORDER_DETAILS]
+           ([PRODUCT_NAME]
+           ,[QUANTITY]
+           ,[PRICE])
+     VALUES
+           ('LCD 32"', 1, 27499)
+		   , ('Washing Machine', 1, 17199)
+		   , ('SLR Camera', 1, 23909)
+GO
+
