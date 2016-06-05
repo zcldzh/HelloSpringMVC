@@ -51,4 +51,8 @@ public class UserName {
 	public void setLastNameC(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	public void setLastNameD(String lastName) {
+		this.lastName = lastName;
+	}
 }
