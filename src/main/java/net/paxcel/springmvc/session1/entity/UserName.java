@@ -39,5 +39,8 @@ public class UserName {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}	
-
+	
+	public void setLastNameA(String lastName) {
+		this.lastName = lastName;
+	}
 }
